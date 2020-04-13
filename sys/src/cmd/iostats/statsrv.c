@@ -25,7 +25,7 @@ char Ebadver[]	= "Unrecognized 9P version";
 int
 okfile(char *s, int mode)
 {
-	if(strncmp(s, "/fd/", 3) == 0){
+	if(strncmp(s, "/fd/", 4) == 0){
 		/* 0, 1, and 2 we handle ourselves */
 		if(s[4]=='/' || atoi(s+4) > 2)
 			return 0;
